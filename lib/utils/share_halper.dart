@@ -3,7 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ShareHalper with ChangeNotifier{
 
-  void setRegister(String email, String password)async{
+  void setRegister(String email, String password)async
+  {
     SharedPreferences shr = await SharedPreferences.getInstance();
     shr.setString("email",email);
     shr.setString("password",password);
@@ -18,8 +19,8 @@ class ShareHalper with ChangeNotifier{
     SharedPreferences shr = await SharedPreferences.getInstance();
     shr.setBool("login", isLogin);
   }
-  void getLoginStatus()async{
+  Future<bool?> getLoginStatus()async{
     SharedPreferences shr = await SharedPreferences.getInstance();
-    shr.getBool("login");
+    return shr.getBool("login");
   }
 }

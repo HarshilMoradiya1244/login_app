@@ -10,13 +10,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  bool? isLogin;
+  String? isLogin;
   void initState() {
     super.initState();
     create();
   }
-  void create()async{
-    ShareHalper shr =ShareHalper();
+  Future<void> create()async{
+    ShareHalper shr = ShareHalper();
    isLogin = await shr.getLoginStatus();
    }
   @override
