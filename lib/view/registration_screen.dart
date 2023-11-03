@@ -40,6 +40,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 children: [
                   Image.asset("assets/images/pangvinlogo.png",height: 200,),
                   TextField(
+                    controller: txtEmail,
                     keyboardType: TextInputType.emailAddress,
                     style: Theme.of(context).textTheme.titleMedium,
                     decoration: InputDecoration(
@@ -54,6 +55,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                   SizedBox(height: 15,),
                   TextField(
+                    controller: txtPassword,
                     obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                     style: Theme.of(context).textTheme.titleMedium,
@@ -67,21 +69,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       fillColor: Colors.purple.shade100,
                     ),
                   ),
-                  SizedBox(height: 15,),
-                  TextField(
-                    obscureText: true,
-                    keyboardType: TextInputType.visiblePassword,
-                    style: Theme.of(context).textTheme.titleMedium,
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      hintText: 'Conform The Password',
-                      labelText: 'Conform Password',
-                      labelStyle: Theme.of(context).textTheme.titleMedium,
-                      hintStyle:Theme.of(context).textTheme.titleMedium ,
-                      filled: true,
-                      fillColor: Colors.purple.shade100,
-                    ),
-                  ),
+
                   SizedBox(height: 50,),
 
                   Container(
